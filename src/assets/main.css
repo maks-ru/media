@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+
+@layer components {
+  .custom-block {
+    @apply bg-gray-900 opacity-60; /* rgb(24, 24, 39) и opacity: 0.2 */
+    border-radius: 129px  20px 20px 20px; /* кастомное значение */
+    box-shadow: 
+      inset 0px 10px 62px 0px rgba(48, 56, 95, 1), 
+      0px 14px 44px 0px rgba(2, 4, 15, 1); /* кастомное значение */
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
